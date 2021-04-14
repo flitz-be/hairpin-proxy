@@ -25,6 +25,9 @@ spec:
       containers:
         - image: compumike/hairpin-proxy-haproxy:0.2.1
           name: main
+          env:
+            - name: TARGET_SERVER
+              value: flitz-networking-nginx-ingress-controller.networking.svc.cluster.local
           resources:
             requests:
               memory: "100Mi"
